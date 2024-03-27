@@ -1,0 +1,178 @@
+<!DOCTYPE html><!-- HTML 5-->
+<html> 
+<head>
+    <title>Register</title><!-- BROWSER TAB TITLE FIX-->
+    <meta charset="utf-8"><!-- Character set - unicode -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg"><!-- BROWSER TAB ICON FIX-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!--External Common stylesheet-->
+    <link href=""  rel="stylesheet"> 
+    <script src="js/log.js"></script>
+
+</head>
+<body>
+    <section class="vh-150" style="background-color: #c9ec84;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+              <div class="card" style="border-radius: 1rem;">
+                <div class="row g-0">
+                  <div class="col-md-6 col-lg-5 d-none d-md-block">
+                    <img src="https://i.pinimg.com/736x/56/e7/97/56e797a1c58e39ad1d4ada2a48c423ee.jpg"
+                      alt="login form" class="img-fluid " style="border-radius: 1rem 0 0 1rem; height: 800px;" />
+                  </div>
+                  <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                    <div class="card-body p-4 p-lg-5 text-black">
+      
+                      <form name="form_name" id="form_id">
+      
+                        <div class="d-flex align-items-center mb-3 pb-1">
+                            <img src="https://i.pinimg.com/736x/c3/40/b7/c340b736a2cd9e1b434456c9332f9109.jpg" style="border-radius:50% ;" height="50px">
+                          <!--<i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>-->
+                          <span class="h1 fw-bold mb-0">Logo</span>
+                        </div>
+                        
+                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Register New User</h5>
+                        <samll class="text-danger"><b>*Denoted the fields are mandatory</b></samll>
+      
+                        <form class="card-body p-5" name="formLogRegister_id" id="formLogRegister_name"  method="POST">  <!-- FORM OPEN HERE-->
+                            <div class="row mt-4">
+                                <div class="form-group col-md-6">
+                                    <label for="Name_id" class="mb-2">Name<samll class="text-danger"><b>*</b></samll></label>
+                                    <input type="text" class="form-control" id="Name_id" name="Name_name" placeholder="Name"  maxlength="150"  onchange="validatename(this)">
+                                    <span class="text-danger" id="namemsg1"></span>
+                                </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="Email_id" class="mb-2">Email<samll class="text-danger"><b>*</b></samll></label>
+                                    <input type="text" class="form-control" id="Email_id" name="Email_name"  placeholder="Email" maxlength="150" onchange="ValidateEmail(this)">
+                                    <span class="text-danger" id="emailmsg1"></span>
+                                  </div>
+                                </div>
+                                <div class="row mt-4">
+                                <div class="form-group col">
+                                    <label for="Phone-id" class="mb-2">Phone Number<samll class="text-danger"><b>*</b></samll></label>
+                                    <input type="tel" class="form-control" id="Phone_id" name="Phone_name"  placeholder="Phone Number" maxlength="10" onchange="Validatephone(this)" >
+                                    <span class="text-danger" id="phonemsg1"></span>
+                                  </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="form-group col-md-6">
+                                        <label for="Password_id" class="mb-2">Password<samll class="text-danger"><b>*</b></samll></label>
+                                        <input type="password" class="form-control" id="Password_id" class="Password_name" placeholder="Password"  maxlength="10" onchange="Validatepassword(this)">
+                                        <span class="text-danger" id="passwordmsg1"></span>
+                                        </div>
+                                    <div class="form-group col-md-6">
+                                    <label for="txtFldDOB_id" class="mb-2">Date-of-birth</label>
+                                    <input type="=DOB" class="form-control" id="DOB_id" name="DOB_name" placeholder="DD-MM-YY"  maxlength="150">
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="form-group ">
+                                        <label for="Address-id" class="mb-6">Address<samll class="text-danger"><b>*</b></samll></label>
+                                          <textarea type="Address" rows="3" class="form-control" id="Address_id" name="Address_name" placeholder="Address" maxlength="150" onchange="checkLetterValidation(this)">
+                                        </textarea>
+                                        <span class="text-danger" id="lettermsg"></span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-5">
+                                              <label for="selCity_id" class="my-2">City</label>
+                                              <select id="selCity_id" name="selCity_name" class="form-control">
+                                                  <option value="" selected>Choose City...</option> 
+                                                  <option value="Abiramam">Abiramam</option>
+                                                  <option value="Adirampattinam">Adirampattinam</option>
+                                                  <option value="Aduthurai">Aduthurai</option>
+                                                  <option value="Alagapuram">Alagapuram</option>
+                                                  <option value="Alandur">Alandur</option>
+                                                  <option value="Alanganallur">Alanganallur</option>
+                                                  <option value="Alangayam">Alangayam</option>
+                                                  <option value="Alangudi">Alangudi</option>
+                                                  <option value="Alangulam">Alangulam</option>
+                                                  <option value="Alappakkam">Alappakkam</option>
+                                                  <option value="Alwa Tirunagari">Alwa Tirunagari</option>
+                                                  <option value="Ambasamudram">Ambasamudram</option>
+                                                  <option value="Ambattur">Ambattur</option>
+                                                  <option value="Ambur">Ambur</option>
+                                                  <option value="Ammapettai">Ammapettai</option>
+                                                  <option value="Anamalais">Anamalais</option>
+                                                  <option value="Andippatti">Andippatti</option>
+                                                  <option value="Annamalainagar">Annamalainagar</option>
+                                                  <option value="Annavasal">Annavasal</option>
+                                                  <option value="Annur">Annur</option>
+                                                  <option value="Anthiyur">Anthiyur</option>
+                                                  <option value="Arakkonam">Arakkonam</option>
+                                                  <option value="Arantangi">Arantangi</option>
+                                                  <option value="Arcot">Arcot</option>
+                                                  <option value="Arimalam">Arimalam</option>
+                                                  <option value="Ariyalur">Ariyalur</option>
+                                                  <option value="Arni">Arni</option>
+                                                  <option value="Arumbavur">Arumbavur</option>
+                                                  <option value="Arumuganeri">Arumuganeri</option>
+                                                  <option value="Aruppukkottai">Aruppukkottai</option>
+                                                  <option value="Aruvankad">Aruvankad</option>
+                                                  <option value="Attayyampatti">Attayyampatti</option>
+                                                  <option value="Attur">Attur</option>
+                                                  </select>
+                                                  </div>
+                                                  <div class="form-group col-md-4">
+                                                    <label for="selState_id" class="my-2">State</label>
+                                                    <select id="selState_id" name="selState_name" class="form-control">
+                                                      <option value="" selected>Choose...</option>
+                                                      <option value="Andra Pradesh">Andra Pradesh</option>
+                                                      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                      <option value="Assam">Assam</option>
+                                                      <option value="Bihar">Bihar</option>
+                                                      <option value="Chhattisgarh">Chhattisgarh</option>
+                                                      <option value="Goa">Goa</option>
+                                                      <option value="Gujarat">Gujarat</option>
+                                                      <option value="Haryana">Haryana</option>
+                                                      <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                      <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                                      <option value="Jharkhand">Jharkhand</option>
+                                                      <option value="Karnataka">Karnataka</option>
+                                                      <option value="Kerala">Kerala</option>
+                                                      <option value="Madya Pradesh">Madya Pradesh</option>
+                                                      <option value="Maharashtra">Maharashtra</option>
+                                                      <option value="Manipur">Manipur</option>
+                                                      <option value="Meghalaya">Meghalaya</option>
+                                                      <option value="Mizoram">Mizoram</option>
+                                                      <option value="Nagaland">Nagaland</option>
+                                                      <option value="Orissa">Orissa</option>
+                                                      <option value="Punjab">Punjab</option>
+                                                      <option value="Rajasthan">Rajasthan</option>
+                                                      <option value="Sikkim">Sikkim</option>
+                                                      <option value="Tamil Nadu">Tamil Nadu</option>
+                                                      <option value="Telangana">Telangana</option>
+                                                      <option value="Tripura">Tripura</option>
+                                                      <option value="Uttaranchal">Uttaranchal</option>
+                                                      <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                      <option value="West Bengal">West Bengal</option>
+                                                      <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                                                      <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                                      <option value="Chandigarh">Chandigarh</option>
+                                                      <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                                      <option value="Daman and Diu">Daman and Diu</option>
+                                                      <option value="Delhi">Delhi</option>
+                                                      
+                                                      </select>
+                                                      </div>
+                                                      <div class="form-group col-md-3">
+                                                        <label for="txtFldZipCode" class="my-2">Zip</label>
+                                                        <input type="text" class="form-control" id="txtFldZipCode_id" name="txtFldZipCode_name"  maxlength="15">
+                                                      </div>
+                                                    </div> 
+                                                      <div class="row mb-3 d-flex justify-content-center mt-5">
+                                                        <button type="button" class="btn btn-lg  col-md-5 "  style="background-color: #8af487; border-radius: 100px; "  onclick="validation(this)" >Submit</button> 
+                                                        <div> 
+                                                            </div>
+                                                            </div>
+                            
+
+                                </form>
+                            
+                            </body>
+
+                            </html>
